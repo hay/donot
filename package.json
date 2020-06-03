@@ -1,10 +1,11 @@
 {
   "name": "donot",
   "version": "0.2.0",
-  "description": "A utility library that you shouldn't use",
+  "description": "Do not use this utility library",
   "main": "dist/donot.js",
   "scripts": {
     "dist": "webpack -p",
+    "publish" : "npm run dist && npm publish",
     "watch": "http-server & webpack -dw"
   },
   "repository": {

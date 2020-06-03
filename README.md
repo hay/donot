@@ -35,12 +35,15 @@ A shortcut for `document.querySelectorAll`. Converts the elements in an array.
 $$("p").forEach((p) => p.style.color = 'red');
 ````
 
-**`combinations(list: array): array`**
-Create a list of all unique combinations, where a,b === b,a.
+**`combinations(list: array, opts?:object): array`**
+Create a list of all unique combinations, where a,b === b,a. By default, equals like 'a,a' are allowed, if you don't want that, pass `{ allowEquals : false }` as a second argument.
 
 ```javascript
 const options = combinations([1, 2]);
 console.log(options); // [ [ 1, 1 ], [ 1, 2 ], [ 2, 2 ] ]
+
+const options = combinations([1, 2], { allowEquals : false });
+console.log(options); // [ [ 1, 2 ] ]
 ````
 
 **`degToRad(deg: number): number`**

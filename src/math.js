@@ -1,9 +1,15 @@
 // Create a list of all unique combinations, where a,b === b,a
-export function combinations(list) {
+export function combinations(list, opts = { allowEquals : true}) {
     const out = [];
     const keys = new Set();
 
     for (let item of matrix(list, list)) {
+        if ('allowEquals' in opts && !opts.allowEquals) {
+            if (item[0] === item[1]) {
+                continue;
+            }
+        }
+
         if (item[0] > item[1]) {
             item = [item[1], item[0]];
         }
