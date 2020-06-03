@@ -7,6 +7,7 @@ module.exports = {
         filename: 'donot.js',
         library : 'donot',
         libraryTarget : 'umd',
+        globalObject : 'this',
         path: path.resolve(__dirname, 'dist'),
     },
 
