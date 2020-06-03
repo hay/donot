@@ -5,7 +5,7 @@
   "main": "dist/donot.js",
   "scripts": {
     "dist": "webpack -p",
-    "publish" : "npm run dist && npm publish",
+    "publish": "npm run dist && npm publish",
     "watch": "http-server & webpack -dw"
   },
   "repository": {
