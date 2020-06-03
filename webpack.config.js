@@ -7,7 +7,7 @@ module.exports = {
         filename: 'donot.js',
         library : 'donot',
         libraryTarget : 'umd',
-        globalObject : 'this',
+        globalObject : 'this', // Webpack 4 needs this for UMD to work in Node, see issue #6784
         path: path.resolve(__dirname, 'dist'),
     },
 

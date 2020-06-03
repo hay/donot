@@ -1,3 +1,24 @@
+// Create a list of all unique combinations, where a,b === b,a
+export function combinations(list) {
+    const out = [];
+    const keys = new Set();
+
+    for (let item of matrix(list, list)) {
+        if (item[0] > item[1]) {
+            item = [item[1], item[0]];
+        }
+
+        const key = String(item[0]) + String(item[1]);
+
+        if (!keys.has(key)) {
+            out.push(item);
+            keys.add(key);
+        }
+    }
+
+    return out;
+}
+
 export function degToRad(deg) {
     return deg * (Math.PI / 180)
 }
@@ -16,27 +37,6 @@ export function matrix(cols, rows) {
 
 export function noop() {
     return function(){};
-}
-
-// Create a list of all unique combinations, where a,b === b,a
-export function permutations(list) {
-    const out = [];
-    const keys = new Set();
-
-    for (let item of matrix(list, list)) {
-        if (item[0] > item[1]) {
-            item = [item[1], item[0]];
-        }
-
-        const key = String(item[0]) + String(item[1]);
-
-        if (!keys.has(key)) {
-            out.push(item);
-            keys.add(key);
-        }
-    }
-
-    return out;
 }
 
 export function range(min, max = null) {
