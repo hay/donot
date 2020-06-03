@@ -6,6 +6,7 @@ module.exports = {
     output: {
         filename: 'donot.js',
         library : 'donot',
+        libraryTarget : 'umd',
         path: path.resolve(__dirname, 'dist'),
     },
 
@@ -18,8 +19,6 @@ module.exports = {
             }
         ]
     },
-
-    watch: true,
 
     devtool : 'source-map'
 };

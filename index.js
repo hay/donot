@@ -10,7 +10,6 @@ export {
     $,
     $$,
     degToRad,
-    find,
     getJson,
     matrix,
     noop,

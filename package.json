@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A utility library that you shouldn't use",
   "browser": "dist/donot.js",
+  "main" : "index.js",
   "scripts": {
     "dist": "webpack -p",
     "watch": "http-server & webpack -dw"

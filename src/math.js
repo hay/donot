@@ -2,10 +2,6 @@ export function degToRad(deg) {
     return deg * (Math.PI / 180)
 }
 
-export function find(arr, cb) {
-    return arr.filter(cb)[0];
-}
-
 export function matrix(cols, rows) {
     const arr = [];
 
