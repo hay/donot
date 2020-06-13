@@ -1,6 +1,6 @@
 {
   "name": "donot",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Do not use this utility library",
   "main": "dist/donot.js",
   "scripts": {
