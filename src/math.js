@@ -1,3 +1,13 @@
+export function chunk(array, size = 1) {
+    const results = [];
+
+    for (let i = 0; i < array.length; i += size) {
+        results.push(array.slice(i, i + size));
+    }
+
+    return results;
+}
+
 // Create a list of all unique combinations, where a,b === b,a
 export function combinations(list, opts = { allowEquals : true}) {
     const out = [];

@@ -1,5 +1,5 @@
 (async function() {
-    const _ = require('donot');
+    const _ = require('../dist/donot.js');
     console.log(_.randInt(5, 10));
 
     const grid = _.matrix([1,2,3], [4,5,6]);
@@ -15,6 +15,10 @@
     console.log(_.range(2,5));
 
     console.log(_.sum([1,2,3,4]));
+
+    const nrs = _.range(1, 10);
+    const chunks = _.chunk(nrs, 4);
+    console.log(chunks);
 
     console.log("Let's wait 2 seconds");
     await _.timeout(2000);

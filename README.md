@@ -35,6 +35,15 @@ A shortcut for `document.querySelectorAll`. Converts the elements in an array.
 $$("p").forEach((p) => p.style.color = 'red');
 ````
 
+**`chunk(array: array, size: number): array`**
+Chunks a given `array` in multiple arrays of maximum size `size`.
+
+```javascript
+const nrs = _.range(1, 10);
+const chunks = _.chunk(nrs, 4);
+console.log(chunks); // [ [ 1, 2, 3, 4 ], [ 5, 6, 7, 8 ], [ 9 ] ]
+````
+
 **`combinations(list: array, opts?:object): array`**
 Create a list of all unique combinations, where a,b === b,a. By default, equals like 'a,a' are allowed, if you don't want that, pass `{ allowEquals : false }` as a second argument.
 
