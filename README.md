@@ -63,7 +63,8 @@ console.log(degToRad(180)); // 3.141592....
 ````
 
 **`getJson(url: string): Promise`**
-Uses `fetch` to do a HTTP call and return JSON.
+**`getJson(url: string, params: object): Promise`**
+Uses `fetch` to do a HTTP call and return JSON. `params` can be an object that will be transformed into URL arguments (see also `urlWithParams`).
 
 ```javascript
 const data = await getJson('http://www.example.com/data.json');
@@ -114,6 +115,16 @@ console.log("Let's wait 2 seconds");
 await timeout(2000);
 console.log("That was 2 seconds");
 ````
+
+**`urlWithParams(url: string, params: object): string`**
+Transform a `url` with an object `params` into an URL with arguments.
+
+```javascript
+const url = _.urlWithParams('http://example.com', {
+        foo : 'bar',
+        1 : '2'
+});
+```
 
 ## License
 MIT &copy; [Hay Kranen](http://www.haykranen.nl)

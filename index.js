@@ -1,5 +1,5 @@
 import { $, $$ } from './src/dom.js';
-import { getJson } from './src/http.js';
+import { getJson, urlWithParams } from './src/http.js';
 import {
     chunk, degToRad, matrix, noop, combinations, range, randInt, sample,
     shuffle, sum
@@ -20,5 +20,6 @@ export {
     sample,
     shuffle,
     sum,
-    timeout
+    timeout,
+    urlWithParams
 }

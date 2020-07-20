@@ -20,6 +20,13 @@
     const chunks = _.chunk(nrs, 4);
     console.log(chunks);
 
+    const url = _.urlWithParams('http://example.com', {
+        foo : 'bar',
+        1 : '2'
+    });
+
+    console.log(url);
+
     console.log("Let's wait 2 seconds");
     await _.timeout(2000);
     console.log("That was 2 seconds");
