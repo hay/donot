@@ -62,6 +62,16 @@ Converts from degrees to radians.
 console.log(degToRad(180)); // 3.141592....
 ````
 
+**`getCssProp(el: string | HTMLElement, property: string) : string`**
+Returns the value of a CSS property of an element. If `el` is the string `root`, the property is fetched from the `:root` element.
+
+Also see `setCssProp`.
+
+```javascript
+setCssProp('root', '--color', '#f9f9f9');
+console.log(getCssProp('root', '--color')); // '#f9f9f9'
+````
+
 **`getJson(url: string): Promise`**
 **`getJson(url: string, params: object): Promise`**
 Uses `fetch` to do a HTTP call and return JSON. `params` can be an object that will be transformed into URL arguments (see also `urlWithParams`).
@@ -96,6 +106,18 @@ Returns a random integer between `min` (or 0 if that is not given) and `max`.
 
 **`sample(list: array): any`**
 Returns a random element from an array.
+
+**`setCssProp(el: string | HTMLElement, property: string, value: string) : void`**
+Set a CSS property of an element. If `el` is the string `root`, the property is set on the `:root` element.
+
+Also see `getCssProp`.
+
+```javascript
+setCssProp('root', '--color', '#f9f9f9');
+
+const el = document.querySelector("#main");
+setCssProp(el, '--color', '#f9f9f9');
+````
 
 **`shuffle(list: array): array`**
 Returns a shuffled (randomized) copy of `list`.
