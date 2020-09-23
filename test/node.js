@@ -25,7 +25,7 @@
         1 : '2'
     });
 
-    console.log(url);
+    console.log('urlWithParams: ', url);
 
     console.log("Let's wait 2 seconds");
     await _.timeout(2000);
