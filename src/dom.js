@@ -7,18 +7,11 @@ export function $$(selector) {
 }
 
 export function getCssProp(el = 'root', prop) {
-    if (el === 'root') {
-        return document.documentElement.style.getPropertyValue(prop);
-    } else {
-        return getComputedStyle(el).getPropertyValue(prop);
-    }
+    const $el = el === 'root' ? document.documentElement : el;
+    return window.getComputedStyle($el).getPropertyValue(prop);
 }
 
 export function setCssProp(el = 'root', prop, value) {
-    if (el === 'root') {
-        // Root level
-        document.documentElement.style.setProperty(prop, value);
-    } else {
-        el.style.setProperty(prop, value);
-    }
+    const $el = el === 'root' ? document.documentElement : el;
+    $el.style.setProperty(prop, value);
 }
